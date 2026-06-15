@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-app-bg: #050505;
+  --color-panel-bg: #0c0c0f;
+  --color-card-bg: #0a0a0d;
+  --color-control-bg: #000000;
+  --color-control-muted: rgb(255 255 255 / 0.08);
+  --color-control-hover: rgb(255 255 255 / 0.12);
+  --color-overlay: rgb(0 0 0 / 0.5);
+  --color-border: rgb(255 255 255 / 0.14);
+  --color-border-strong: rgb(255 255 255 / 0.75);
+  --color-text: #ffffff;
+  --color-text-muted: rgb(255 255 255 / 0.56);
+  --color-text-subtle: rgb(255 255 255 / 0.34);
+  --color-text-faint: rgb(255 255 255 / 0.3);
+  --color-inverse-text: #000000;
+  --color-silver: #a1a1aa;
+  --color-silver-bright: #f8fafc;
+  --color-canvas-grid: rgba(255, 255, 255, 0.47);
+  --color-node-shadow: rgb(0 0 0 / 0.55);
+  --color-danger: #ef4444;
+  --color-healthy: #22c55e;
+  --color-healthy-bg: rgb(34 197 94 / 0.16);
+  --color-healthy-border: rgb(34 197 94 / 0.34);
+  --color-degraded: #f59e0b;
+  --color-degraded-bg: rgb(245 158 11 / 0.16);
+  --color-degraded-border: rgb(245 158 11 / 0.34);
+  --color-down: #ef4444;
+  --color-down-bg: rgb(239 68 68 / 0.16);
+  --color-down-border: rgb(239 68 68 / 0.34);
+  --color-usage-low: #38bdf8;
+  --color-usage-medium: #f59e0b;
+  --color-usage-high: #ef4444;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
