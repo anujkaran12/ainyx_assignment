@@ -108,6 +108,7 @@ export function Canvas() {
         nodeTypes={nodeTypes}
         fitView
         deleteKeyCode={null}
+        proOptions={{ hideAttribution: true }}
         className="bg-[var(--color-app-bg)]"
         defaultEdgeOptions={{
           type: "bezier",
@@ -120,7 +121,7 @@ export function Canvas() {
           size={1}
           color="var(--color-canvas-grid)"
         />
-        <Controls className="!bg-[var(--color-panel-bg)] !border-[var(--color-border)] !text-[var(--color-text)]" />
+        <Controls className="!bg-black !border-[var(--color-border)] !text-[var(--pannel-bg)]" />
       </ReactFlow>
     </div>
   );

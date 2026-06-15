@@ -1,6 +1,4 @@
-// src/components/RightPanel.tsx
-
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, X } from "lucide-react";
 import { useApps } from "../hooks/useApps";
 import { useAppStore } from "../store/useAppStore";
 import { NodeInspector } from "./NodeInspector";
@@ -50,6 +48,7 @@ export function RightPanel() {
       {/* Mobile overlay backdrop */}
       {isMobilePanelOpen && (
         <div
+          aria-hidden="true"
           className="fixed inset-0 bg-[var(--color-overlay)] z-20 lg:hidden"
           onClick={() => setMobilePanelOpen(false)}
         />
@@ -58,18 +57,27 @@ export function RightPanel() {
       {/* Panel */}
       <div
         className={`
-          fixed right-0 top-0 h-full w-72 bg-[var(--color-panel-bg)] border-l border-[var(--color-border)]
-          flex flex-col z-30 transition-transform duration-300
-          lg:relative lg:translate-x-0
+          fixed right-0 top-0 h-dvh w-[min(88vw,20rem)] bg-[var(--color-panel-bg)] border-l border-[var(--color-border)]
+          flex flex-col z-30 shadow-[-18px_0_40px_var(--color-node-shadow)] transition-transform duration-300 ease-out
+          lg:relative lg:h-auto lg:w-72 lg:translate-x-0 lg:shadow-none
           ${isMobilePanelOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
         {/* App List Section */}
         <div className="border-b border-[var(--color-border)]">
           <div className="p-4">
-            <h2 className="text-[var(--color-text-muted)] text-xs font-medium uppercase tracking-wider mb-3">
-              Application
-            </h2>
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <h2 className="text-[var(--color-text-muted)] text-xs font-medium uppercase tracking-wider">
+                Application
+              </h2>
+              <Button
+                aria-label="Close app panel"
+                onClick={() => setMobilePanelOpen(false)}
+                className="lg:hidden h-8 w-8 p-0 rounded-lg text-[var(--color-silver)] hover:text-[var(--color-text)] hover:bg-[var(--color-control-hover)]"
+              >
+                <X size={16} strokeWidth={1.8} />
+              </Button>
+            </div>
 
             {/* Search box */}
             <Input

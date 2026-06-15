@@ -109,7 +109,7 @@ export const mockGraphs: Record<string, IAppGraph> = {
         id: 'node-2',
         type: 'serviceNode',
         position: { x: 380, y: 0 },
-        data: { label: 'CockroachDB', status: 'Down', nodeType: 'db', sliderValue: 95, activeTab: 'Disk', costPerHr: '$0.09/HR' },
+        data: { label: 'VectorDB', status: 'Down', nodeType: 'db', sliderValue: 95, activeTab: 'Disk', costPerHr: '$0.09/HR' },
       },
       {
         id: 'node-3',
